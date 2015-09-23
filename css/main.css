@@ -90,6 +90,56 @@ textarea {
     color: #000;
     padding: 0.2em 0;
 }
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+table {
+  background-color: yellow;
+  text-align: center;
+}
+
+thead {
+  background-color: teal;
+  text-align: center;
+} /* top border */
+
+td {
+  width: 40pt;
+  height: 40pt;
+}
+
+tbody tr:nth-of-type(odd) {
+  background-color: cornflowerblue;
+}
+
+tbody tr:nth-of-type(odd) td:nth-of-type(odd) {
+  background-color: yellow;
+}
+
+tbody tr:nth-of-type(even) td:nth-of-type(odd) {
+  background-color: cornflowerblue;
+}
+
+
+tbody tr td:first-child {
+  background-color: teal;
+}
+
+tfoot {
+  background-color: teal;
+}
+
+fieldset {
+  width: 400pt;
+  height: 20pt;
+  background-color: lightgrey;
+} /* buttons */
+
+
+
 /* ---icons for white pieces with class names
 .white-pawn {
   font-size: 20px;
@@ -115,25 +165,6 @@ textarea {
 .white-king {
   content: '\2654';
 }*/
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    Helper classes
