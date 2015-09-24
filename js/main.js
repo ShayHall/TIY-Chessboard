@@ -1,3 +1,6 @@
+(function(globals) {//IIFE: Immediately Invoked Function Expression
+})(window || module && module.exports || this);
+
 (function(globals){
 // Don't worry if that seems a little funky...
 
@@ -20,7 +23,8 @@
    */
   var moves = [
 
- ]; // END moves
+    // TODO: Fill me in!
+  ]; // END moves
 
   // var current; TODO: do we need this?
 
@@ -88,7 +92,7 @@
       for ( var rank = 0; rank < board.length; rank++ ){
         bullet += '|';
         for ( var file = 0; file < board[rank].length; file++ ){
-          bullet += board[rank][file] || ' |';
+          bullet += (board[rank][file] || ' ') + '|';
         }
         bullet += '\n';
       }
@@ -105,7 +109,7 @@
      *
      * @todo Fill me in! ...and remove this comment.
      */
-    function applyMove(from, to){
+    applyMove: function (from, to){
 
 // You should write something in here...
     } // END applyMove
