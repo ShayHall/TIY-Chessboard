@@ -1,0 +1,30 @@
+{
+  "name": "tiyassign",
+  "version": "0.0.0",
+  "description": "entry point (index.js)",
+  "main": "StringCalculator.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShayHall/TIY-Assignments.git"
+  },
+  "author": "Shay Hall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShayHall/TIY-Assignments/issues"
+  },
+  "homepage": "https://github.com/ShayHall/TIY-Assignments#readme",
+  "dependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.3.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.3.0"
+  }
+}
