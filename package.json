@@ -2,9 +2,11 @@
   "name": "tiyassign",
   "version": "0.0.0",
   "description": "entry point (index.js)",
-  "main": "StringCalculator.js",
+  "main": "Everything you need for testin' and sassin'",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha js/tests.js",
+    "start": "browser-sync start --server --directory --startPath='index.html' --files='index.html,js/*.js,css/*.css'",
+    "sass": "node-sass --output css/ scss/main.scss"
   },
   "repository": {
     "type": "git",
@@ -18,13 +20,13 @@
   "homepage": "https://github.com/ShayHall/TIY-Assignments#readme",
   "dependencies": {
     "chai": "^3.2.0",
-    "mocha": "^2.3.2"
+    "mocha": "^2.3.2",
+    "start": "browser-sync start --server --directory --files='index.html'"
   },
   "devDependencies": {
-    "mocha": "^2.3.0"
-  },
-  "devDependencies": {
-    "chai": "^3.2.0",
-    "mocha": "^2.3.0"
+    "browser-sync": "^2.9.6",
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3",
+    "node-sass": "^3.3.3"
   }
 }

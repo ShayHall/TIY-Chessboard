@@ -6,7 +6,6 @@
         <title>Chess | Catalan Opening</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -18,7 +17,7 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-      <table>
+      <table class="chessboard">
         <thead>  <!-- top border -->
           <tr>
             <th></th>
@@ -36,30 +35,30 @@
         <tbody>
           <tr>
             <td>8</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><strong>R</td>
+            <td><strong>N</td>
+            <td><strong>B</td>
+            <td><strong>K</td>
+            <td><strong>Q</td>
+            <td><strong>B</td>
+            <td><strong>N</td>
+            <td><strong>R</td>
             <td>8</td>
           </tr>
           <tr>
-            <td>7</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>7</td>
+            <td class:"column">7</td>
+            <td class="chessboard white-pawn"><strong>P</td>
+            <td class="chessboard white-pawn"><strong>P</td>
+            <td class="chessboard white-pawn"><strong>P</td>
+            <td class="chessboard white-pawn"><strong>P</td>
+            <td class="chessboard white-pawn"><strong>P</td>
+            <td class="chessboard white-pawn"><strong>P</td>
+            <td class="chessboard white-pawn"><strong>P</td>
+            <td class="chessboard white-pawn"><strong>P</td>
+            <td class:"column">7</td>
           </tr>
           <tr>
-            <td>6</td>
+            <td class:"column">6</td>
             <td></td>
             <td></td>
             <td></td>
@@ -68,10 +67,10 @@
             <td></td>
             <td></td>
             <td></td>
-            <td>6</td>
+            <td class:"column">6</td>
           </tr>
           <tr>
-            <td>5</td>
+            <td class:"column">5</td>
             <td></td>
             <td></td>
             <td></td>
@@ -80,10 +79,10 @@
             <td></td>
             <td></td>
             <td></td>
-            <td>5</td>
+            <td class:"column">5</td>
           </tr>
           <tr>
-            <td>4</td>
+            <td class:"column">4</td>
             <td></td>
             <td></td>
             <td></td>
@@ -92,10 +91,10 @@
             <td></td>
             <td></td>
             <td></td>
-            <td>4</td>
+            <td class:"column">4</td>
           </tr>
           <tr>
-            <td>3</td>
+            <td class:"column">3</td>
             <td></td>
             <td></td>
             <td></td>
@@ -104,31 +103,31 @@
             <td></td>
             <td></td>
             <td></td>
-            <td>3</td>
+            <td class:"column">3</td>
           </tr>
           <tr>
-            <td>2</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>2</td>
+            <td class:"column">2</td>
+            <td>P</td>
+            <td>P</td>
+            <td>P</td>
+            <td>P</td>
+            <td>P</td>
+            <td>P</td>
+            <td>P</td>
+            <td>P</td>
+            <td class:"column">2</td>
           </tr>
           <tr>
-            <td>1</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>1</td>
+            <td class:"column">1</td>
+            <td>R</td>
+            <td>N</td>
+            <td>B</td>
+            <td>K</td>
+            <td>Q</td>
+            <td>B</td>
+            <td>N</td>
+            <td>R</td>
+            <td class:"column">1</td>
           </tr>
 
         <tfoot>
@@ -145,33 +144,23 @@
             <td></td>
           </tr>
         </tfoot>
-          <fieldset>
+          <section>
               <i class="fa fa-backward"></i>
-
               <i class="fa fa-step-backward"></i>
-
               <i class="fa fa-play"></i>
-
               <i class="fa fa-pause"></i>
-
               <i class="fa fa-step-forward"></i>
-
               <i class="fa fa-fast-forward"></i>
-          </fieldset> // Buttons
+          </section> <!--Buttons-->
         </tbody>
       </table>
-
-
-
-
-
-
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
+        <script src="js/tests.js"></script>
+        <script src="js/controllers.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
