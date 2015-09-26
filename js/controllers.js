@@ -28,35 +28,35 @@
   });
 
   // Controller for "previous move"...
-  jQuery("fa-step-backward").on('click', function(event){
+  jQuery(".fa-step-backward").on('click', function(event){
     alert("step-backward");
     // TODO: Tell the Model -- `game` -- to advance to the previous move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
   // Controller for "fast-forward"...
-  jQuery("fa-fast-forward").on('click'/*???on what(eventually use keyvalues..???*/, function(event){
+  jQuery(".fa-fast-forward").on('click'/*???on what(eventually use keyvalues..???*/, function(event){
     alert("fast-forward");
     // TODO: Tell the Model -- `game` -- to advance to the last move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
   // Controller for "reset"...
-  jQuery(fa-backward).on('click'/* dunno */, function(event){
+  jQuery(".fa-backward").on('click'/* dunno */, function(event){
     alert("Reset game");
     // TODO: Tell the Model -- `game` -- to do something it knows how to do...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
   // Controller for "watch game play automatically"...
-  jQuery("fa-play").on('click'/* dunno */, function(event){
+  jQuery(".fa-play").on('click'/* dunno */, function(event){
     alert("Play auto");
      // TODO: Tell the Model -- `game` -- to do something it knows how to do...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
   // Controller for anything else...
-  jQuery("fa-pause").on('click'/* dunno */, function(event){
+  jQuery(".fa-pause").on('click'/* dunno */, function(event){
     alert("pause");
     // TODO: Tell the Model -- `game` -- to do something it knows how to do...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
