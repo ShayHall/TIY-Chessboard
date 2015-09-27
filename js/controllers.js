@@ -143,8 +143,25 @@
 
   // Controller for "reset"...
   jQuery(".fa-backward").on('click'/* dunno */, function(event){
-    alert("Reset game");
-    game.board = game.reset;  // TODO: Tell the Model -- `game` -- to do something it knows how to do...
+    $("#d2").addClass("white-pawn");
+    $("#d4").removeClass("white-pawn");
+    $("#g8").addClass("black-knight");
+    $("#f6").removeClass("black-knight");
+    $("#c2").addClass("white-pawn");
+    $("#c4").removeClass("white-pawn");
+    $("#e7").addClass("black-pawn");
+    $("#e6").removeClass("black-pawn");
+    $("#g2").addClass("white-pawn");
+    $("#g3").removeClass("white-pawn");
+    $("#d7").addClass("black-pawn");
+    $("#d5").removeClass("black-pawn");
+    $("#f1").addClass("white-bishop");
+    $("#g2").removeClass("white-bishop");
+    $("#g8").addClass("black-bishop");
+    $("#e7").removeClass("black-bishop");
+    $("#g1").addClass("white-knight");
+    $("#f3").removeClass("white-knight");
+    alert("Back to beginning");  // TODO: Tell the Model -- `game` -- to do something it knows how to do...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
