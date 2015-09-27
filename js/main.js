@@ -22,8 +22,10 @@
    * @var {Array} of...?
    */
   var moves = [  // TODO: Fill me in!
-  true, false
-
+      [ ["firstrankfrom", "firstfilefrom"], ["secondrankfrom", "secondfilefrom"]],
+      [ ["firstrankto", "firstfileto"], ["secondrankto", "secondfileto"]]
+    // [ [6,3],[0,6],[6,2],[1,4],[6,6],[1,3],[7,5],[0,5],[7,6] ],//from
+    // [ [4,3],[2,5],[4,2],[2,4],[5,6],[3,3],[6,6],[1,4],[5,5] ] //to
 ];
 
   // var current; TODO: do we need this?
