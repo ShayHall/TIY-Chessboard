@@ -21,21 +21,15 @@
    * @see applyMove
    * @var {Array} of...?
    */
-  var moves = [
-[[6,3], [0,6], [6,2], [1,4], [6,6], [1,3], [7,5], [0,5], [7,6]],
-[[4,3], [2,5], [4,2], [2,4], [5,6], [3,3], [6,6], [1,4], [5,5]]
-// var current = board[4][3] = board[6][3];
-// var last = board[6][3] = null;
-// console.log(board.join('\n' + '|'));
-// var current = moves[0] var to = moves[0]
-// d4, Nf6, c4, e6, g3, d5, Bg2, Bg7, Nf3
-    // TODO: Fill me in!
-  ]; // END moves
+  var moves = [  // TODO: Fill me in!
+  true, false
+
+];
 
   // var current; TODO: do we need this?
-var current = moves[0][1];
-  // You don't need to understand `globals` yet...
+
   var game = (globals.game = {
+
     /**
      * Provide a _copy_ of the game board in order to update the View from it
      *
@@ -63,6 +57,7 @@ var current = moves[0][1];
      * @todo Make this work!
      */
     next: function(){
+
       // Doesn't this seem to be missing something?
       return this;
     },
@@ -116,8 +111,8 @@ var current = moves[0][1];
      * @todo Fill me in! ...and remove this comment.
      */
     applyMove: function (from, to){
-      board.to = board.from;
-      board.from = null;
+    console.log(moves[0]);
+    console.log(moves[1]);
       // You should write something in here...
     } // END applyMove
   }); // END game
