@@ -9,14 +9,18 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,700italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
+      <h1>Chess</h1>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+      <img src="http://i.imgur.com/VZWRphB.gif"></a>
       <table class="chessboard">
         <thead>  <!-- top border -->
           <tr>
@@ -35,98 +39,98 @@
         <tbody>
           <tr>
             <td>8</td>
-            <td class="chessboard black-rook"></td>
-            <td class="chessboard black-knight"></td>
-            <td class="chessboard black-bishop"></td>
-            <td class="chessboard black-king"></td>
-            <td class="chessboard black-queen"></td>
-            <td class="chessboard black-bishop"></td>
-            <td class="chessboard black-knight"></td>
-            <td class="chessboard black-rook"></td>
+            <td id= "a8" class=" black-rook"></td>
+            <td id= "b8" class=" black-knight"></td>
+            <td id= "c8" class=" black-bishop"></td>
+            <td id= "d8" class=" black-king"></td>
+            <td id= "e8" class=" black-queen"></td>
+            <td id= "f8" class=" black-bishop"></td>
+            <td id= "g8" class=" black-knight"></td>
+            <td id= "h8" class=" black-rook"></td>
             <td>8</td>
           </tr>
           <tr>
             <td class:"column">7</td>
-            <td class="chessboard black-pawn"></td>
-            <td class="chessboard black-pawn"></td>
-            <td class="chessboard black-pawn"></td>
-            <td class="chessboard black-pawn"></td>
-            <td class="chessboard black-pawn"></td>
-            <td class="chessboard black-pawn"></td>
-            <td class="chessboard black-pawn"></td>
-            <td class="chessboard black-pawn"></td>
+            <td id= "a7" class="black-pawn"></td>
+            <td id= "b7" class="black-pawn"></td>
+            <td id= "c7" class=" black-pawn"></td>
+            <td id= "d7" class=" black-pawn"></td>
+            <td id= "e7" class=" black-pawn"></td>
+            <td id= "f7" class=" black-pawn"></td>
+            <td id= "g7" class=" black-pawn"></td>
+            <td id= "h7" class=" black-pawn"></td>
             <td class:"column">7</td>
           </tr>
           <tr>
             <td class:"column">6</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id= "a6"></td>
+            <td id= "b6"></td>
+            <td id= "c6"></td>
+            <td id= "d6"></td>
+            <td id= "e6"></td>
+            <td id= "f6"></td>
+            <td id= "g6"></td>
+            <td id= "h6"></td>
             <td class:"column">6</td>
           </tr>
           <tr>
             <td class:"column">5</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id= "a5"></td>
+            <td id= "b5"></td>
+            <td id= "c5"></td>
+            <td id= "d5"></td>
+            <td id= "e5"></td>
+            <td id= "f5"></td>
+            <td id= "g5"></td>
+            <td id= "h5"></td>
             <td class:"column">5</td>
           </tr>
           <tr>
             <td class:"column">4</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id= "a4"></td>
+            <td id= "b4"></td>
+            <td id= "c4"></td>
+            <td id= "d4"></td>
+            <td id= "e4"></td>
+            <td id= "f4"></td>
+            <td id= "g4"></td>
+            <td id= "h4"></td>
             <td class:"column">4</td>
           </tr>
           <tr>
             <td class:"column">3</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class:"column">3</td>
+            <td id= "a3"></td>
+            <td id= "b3"></td>
+            <td id= "c3"></td>
+            <td id= "d3"></td>
+            <td id= "e3"></td>
+            <td id= "f3"></td>
+            <td id= "g3"></td>
+            <td id= "h3"></td>
+            <td class:"columnRight">3</td>
           </tr>
           <tr>
-            <td class:"column">2</td>
-            <td class="chessboard white-pawn"></td>
-            <td class="chessboard white-pawn"></td>
-            <td class="chessboard white-pawn"></td>
-            <td class="chessboard white-pawn"></td>
-            <td class="chessboard white-pawn"></td>
-            <td class="chessboard white-pawn"></td>
-            <td class="chessboard white-pawn"></td>
-            <td class="chessboard white-pawn"></td>
+            <td class:"columnLeft">2</td>
+            <td id="a2" class="white-pawn"></td>
+            <td id="b2" class="white-pawn"></td>
+            <td id="c2" class="white-pawn"></td>
+            <td id="d2" class="white-pawn"></td>
+            <td id="e2" class="white-pawn"></td>
+            <td id="f2" class="white-pawn"></td>
+            <td id="g2" class="white-pawn"></td>
+            <td id="h2" class="white-pawn"></td>
             <td class:"column">2</td>
           </tr>
           <tr>
             <td class:"column">1</td>
-            <td class="chessboard white-rook"></td>
-            <td class="chessboard white-knight"></td>
-            <td class="chessboard white-bishop"></td>
-            <td class="chessboard white-queen"></td>
-            <td class="chessboard white-rook"></td>
-            <td class="chessboard white-bishop"></td>
-            <td class="chessboard white-knight"></td>
-            <td class="chessboard white-rook"></td>
+            <td class="white-rook"></td>
+            <td class="white-knight"></td>
+            <td class="white-bishop"></td>
+            <td class="white-queen"></td>
+            <td class="white-rook"></td>
+            <td class="white-bishop"></td>
+            <td class="white-knight"></td>
+            <td class="white-rook"></td>
             <td class:"column">1</td>
           </tr>
 
@@ -144,6 +148,8 @@
             <td></td>
           </tr>
         </tfoot>
+        </tbody>
+      </table>
           <section>
             <button> <i class="fa fa-backward"></i></button>
             <button> <i class="fa fa-step-backward"></i></button>
@@ -152,14 +158,11 @@
             <button> <i class="fa fa-step-forward"></i></button>
             <button> <i class="fa fa-fast-forward"></i></button>
           </section> <!--Buttons-->
-        </tbody>
-      </table>
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/tests.js"></script>
+        <!-- <script src="js/tests.js"></script> -->
         <script src="js/controllers.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

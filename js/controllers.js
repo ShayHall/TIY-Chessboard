@@ -7,22 +7,12 @@
    * 3. What `CALLBACK` should be run when the interaction happens?
    * 4. What should my `CALLBACK` do with it's `EVENT`...?
    */
-  // document.querySelector(SELECTOR)
-  //   .addEventListener(TYPE, CALLBACK);
-  // // AKA
-  // jQuery(SELECTOR).on(TYPE, CALLBACK);
-  // // Where CALLBACK is...
-  // function CALLBACK (EVENT){
-  //   // Do something with Models and Views...
-  //   // Maybe do something with EVENT...?
-  // }
-// $(".accord-one").click(function(){
-//   $(".sub-one").toggleClass("subtract-accordion");
-// });
+
 
   // Controller for "next move"...
   jQuery(".fa-step-forward").on('click', function(event){
-    alert("Step forward"); // Fire tracer bullet!
+      $("#d2").removeClass("white-pawn");
+      $("#d4").addClass("white-pawn");
     // TODO: Tell the Model -- `game` -- to advance to the next move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
@@ -44,7 +34,7 @@
   // Controller for "reset"...
   jQuery(".fa-backward").on('click'/* dunno */, function(event){
     alert("Reset game");
-    // TODO: Tell the Model -- `game` -- to do something it knows how to do...
+    game.board = game.reset;  // TODO: Tell the Model -- `game` -- to do something it knows how to do...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
@@ -62,5 +52,4 @@
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
-// Am I supposed to recognize this?
 })(window || module && module.exports || this)
