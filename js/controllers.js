@@ -24,27 +24,39 @@
       $("#g8").removeClass("black-knight");
       $("#f6").addClass("black-knight");
     break;
-    // case 3:
-    //   $("#d2").removeClass("white-pawn");
-    //   $("#d4").addClass("white-pawn");
-    // // break;
-    // // case 4:
-    //   $("#d2").removeClass("white-pawn");
-    //   $("#d4").addClass("white-pawn");
-    // // break;
-    // // case 5:
-    //   $("#d2").removeClass("white-pawn");
-    //   $("#d4").addClass("white-pawn");
-    // break;
-    // case 6:
-    // break;
-    // case 7:
-    // break;
-    // case 8:
-    // break;
-    // case 9:
-    // break;
-    default: alert("Game over");
+    case 3:
+      $("#c2").removeClass("white-pawn");
+      $("#c4").addClass("white-pawn");
+    break;
+    case 4:
+      $("#e7").removeClass("black-pawn");
+      $("#e6").addClass("black-pawn");
+    break;
+    case 5:
+      $("#g2").removeClass("white-pawn");
+      $("#g3").addClass("white-pawn");
+    break;
+    case 6:
+      $("#d7").removeClass("black-pawn");
+      $("#d5").addClass("black-pawn");
+    break;
+    case 7:
+      $("#f1").removeClass("white-bishop");
+      $("#g2").addClass("white-bishop");
+    break;
+    case 8:
+      $("#g8").removeClass("black-bishop");
+      $("#e7").addClass("black-bishop");
+    break;
+    case 9:
+      $("#g1").removeClass("white-knight");
+      $("#f3").addClass("white-knight");
+    break;
+    case 10:
+      alert("Game over");
+    break;
+    default:
+      break;
   }
 
     // TODO: Tell the Model -- `game` -- to advance to the next move...
@@ -57,35 +69,47 @@
   moveCounter -= 1;
     console.log(moveCounter);
     switch (moveCounter) {
-    case 1:
+    case 0:
       $("#d2").addClass("white-pawn");
       $("#d4").removeClass("white-pawn");
     break;
-    case 2:
+    case 1:
       $("#g8").addClass("black-knight");
       $("#f6").removeClass("black-knight");
     break;
-    // case 3:
-    //   $("#d2").removeClass("white-pawn");
-    //   $("#d4").addClass("white-pawn");
-    // // break;
-    // // case 4:
-    //   $("#d2").removeClass("white-pawn");
-    //   $("#d4").addClass("white-pawn");
-    // // break;
-    // // case 5:
-    //   $("#d2").removeClass("white-pawn");
-    //   $("#d4").addClass("white-pawn");
-    // break;
-    // case 6:
-    // break;
-    // case 7:
-    // break;
-    // case 8:
-    // break;
-    // case 9:
-    // break;
-    default: alert("Back to beginning");
+    case 2:
+      $("#c2").addClass("white-pawn");
+      $("#c4").removeClass("white-pawn");
+    break;
+    case 3:
+      $("#e7").addClass("black-pawn");
+      $("#e6").removeClass("black-pawn");
+    break;
+    case 4:
+      $("#g2").addClass("white-pawn");
+      $("#g3").removeClass("white-pawn");
+    break;
+    case 5:
+      $("#d7").addClass("black-pawn");
+      $("#d5").removeClass("black-pawn");
+    break;
+    case 6:
+      $("#f1").addClass("white-bishop");
+      $("#g2").removeClass("white-bishop");
+    break;
+    case 7:
+      $("#g8").addClass("black-bishop");
+      $("#e7").removeClass("black-bishop");
+    break;
+    case 8:
+      $("#g1").addClass("white-knight");
+      $("#f3").removeClass("white-knight");
+    break;
+    case 9:
+      alert("Back to beginning");
+    break;
+    default:
+    break;
   }
     // TODO: Tell the Model -- `game` -- to advance to the previous move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
@@ -94,6 +118,7 @@
   // Controller for "fast-forward"...
   jQuery(".fa-fast-forward").on('click'/*???on what(eventually use keyvalues..???*/, function(event){
     alert("fast-forward");
+
     // TODO: Tell the Model -- `game` -- to advance to the last move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
