@@ -113,8 +113,7 @@
      * @todo Fill me in! ...and remove this comment.
      */
     applyMove: function (from, to){
-    console.log(moves[0]);
-    console.log(moves[1]);
+    board[0][0] = "pop";
       // You should write something in here...
     } // END applyMove
   }); // END game
