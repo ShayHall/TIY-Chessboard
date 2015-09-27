@@ -8,18 +8,85 @@
    * 4. What should my `CALLBACK` do with it's `EVENT`...?
    */
 
-
+  var moveCounter = 0;
   // Controller for "next move"...
   jQuery(".fa-step-forward").on('click', function(event){
+
+    moveCounter += 1;
+    console.log(moveCounter);
+
+    switch (moveCounter) {
+    case 1:
       $("#d2").removeClass("white-pawn");
       $("#d4").addClass("white-pawn");
+    break;
+    case 2:
+      $("#g8").removeClass("black-knight");
+      $("#f6").addClass("black-knight");
+    break;
+    // case 3:
+    //   $("#d2").removeClass("white-pawn");
+    //   $("#d4").addClass("white-pawn");
+    // // break;
+    // // case 4:
+    //   $("#d2").removeClass("white-pawn");
+    //   $("#d4").addClass("white-pawn");
+    // // break;
+    // // case 5:
+    //   $("#d2").removeClass("white-pawn");
+    //   $("#d4").addClass("white-pawn");
+    // break;
+    // case 6:
+    // break;
+    // case 7:
+    // break;
+    // case 8:
+    // break;
+    // case 9:
+    // break;
+    default: alert("Game over");
+  }
+
     // TODO: Tell the Model -- `game` -- to advance to the next move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
   // Controller for "previous move"...
   jQuery(".fa-step-backward").on('click', function(event){
-    alert("step-backward");
+    // alert("step-backward");
+  moveCounter -= 1;
+    console.log(moveCounter);
+    switch (moveCounter) {
+    case 1:
+      $("#d2").addClass("white-pawn");
+      $("#d4").removeClass("white-pawn");
+    break;
+    case 2:
+      $("#g8").addClass("black-knight");
+      $("#f6").removeClass("black-knight");
+    break;
+    // case 3:
+    //   $("#d2").removeClass("white-pawn");
+    //   $("#d4").addClass("white-pawn");
+    // // break;
+    // // case 4:
+    //   $("#d2").removeClass("white-pawn");
+    //   $("#d4").addClass("white-pawn");
+    // // break;
+    // // case 5:
+    //   $("#d2").removeClass("white-pawn");
+    //   $("#d4").addClass("white-pawn");
+    // break;
+    // case 6:
+    // break;
+    // case 7:
+    // break;
+    // case 8:
+    // break;
+    // case 9:
+    // break;
+    default: alert("Back to beginning");
+  }
     // TODO: Tell the Model -- `game` -- to advance to the previous move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
