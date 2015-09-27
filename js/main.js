@@ -113,7 +113,9 @@
      * @todo Fill me in! ...and remove this comment.
      */
     applyMove: function (from, to){
-    board[0][0] = "pop";
+    board[4][3] = board[6][3];
+    board[6][3] = null;
+    return board;
       // You should write something in here...
     } // END applyMove
   }); // END game
