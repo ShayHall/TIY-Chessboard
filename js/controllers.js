@@ -117,7 +117,25 @@
 
   // Controller for "fast-forward"...
   jQuery(".fa-fast-forward").on('click'/*???on what(eventually use keyvalues..???*/, function(event){
-    alert("fast-forward");
+      $("#d2").removeClass("white-pawn");
+      $("#d4").addClass("white-pawn");
+      $("#g8").removeClass("black-knight");
+      $("#f6").addClass("black-knight");
+      $("#c2").removeClass("white-pawn");
+      $("#c4").addClass("white-pawn");
+      $("#e7").removeClass("black-pawn");
+      $("#e6").addClass("black-pawn");
+      $("#g2").removeClass("white-pawn");
+      $("#g3").addClass("white-pawn");
+      $("#d7").removeClass("black-pawn");
+      $("#d5").addClass("black-pawn");
+      $("#f1").removeClass("white-bishop");
+      $("#g2").addClass("white-bishop");
+      $("#g8").removeClass("black-bishop");
+      $("#e7").addClass("black-bishop");
+      $("#g1").removeClass("white-knight");
+      $("#f3").addClass("white-knight");
+      alert("End of opening");
 
     // TODO: Tell the Model -- `game` -- to advance to the last move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
