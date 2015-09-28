@@ -1,7 +1,7 @@
-(function(globals) {//IIFE: Immediately Invoked Function Expression
+(function(globals){ // IIFE: Immediately Invoked Function Expression
 })(window || module && module.exports || this);
 
-(function(globals){
+(function(globals){ // IIFE: Immediately Invoked Function Expression
 // Don't worry if that seems a little funky...
 
   /**
@@ -21,15 +21,15 @@
    * @see applyMove
    * @var {Array} of...?
    */
-  var moves = [
-
-    // TODO: Fill me in!
-  ]; // END moves
+  var moves = [  // TODO: Fill me in!
+    [ [6,3],[0,6],[6,2],[1,4],[6,6],[1,3],[7,5],[0,5],[7,6] ],//from
+    [ [4,3],[2,5],[4,2],[2,4],[5,6],[3,3],[6,6],[1,4],[5,5] ] //to
+];
 
   // var current; TODO: do we need this?
+  var game = (globals.game = {
+  // var current = Where and what ???
 
-  // You don't need to understand `globals` yet...
-  var game = globals.game = {
     /**
      * Provide a _copy_ of the game board in order to update the View from it
      *
@@ -57,6 +57,7 @@
      * @todo Make this work!
      */
     next: function(){
+
       // Doesn't this seem to be missing something?
       return this;
     },
@@ -109,12 +110,19 @@
      *
      * @todo Fill me in! ...and remove this comment.
      */
-    applyMove: function (from, to){
+    applyMove: function (from, to){ // You should write something in here...
+    console.log("test from " + moves[0][0]);
+    console.log("test to " + moves[1][0]);
+    board[to] = board[from];
+    board[from] = null;
+// Let these two side effects stand on their own.
 
-// You should write something in here...
+    board[moves[1][0]] = board[moves[0][0]];
+    board[moves[0][0]] = null;
+    // console.log("board \n" + board.join('\n' + '|'));
+    // return board;
     } // END applyMove
-  }; // END game
-
+  }); // END game
   /**
    * Provide the initial state of the game board, useful for any game.
    *

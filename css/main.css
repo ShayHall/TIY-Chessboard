@@ -96,41 +96,129 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-table {
-  background-color: yellow;
-  text-align: center;
+body {
+background-color: #FFF9B5;
+margin-left: 15px;
+margin-right: 15px;
 }
 
-thead {
-  background-color: teal;
+h1 {
+  margin-top: 35px;
+  margin-bottom: -15px;
+  margin-left: 50%;
+  color: #b24712;
   text-align: center;
-} /* top border */
+  font-size: 4em;
+  font-family: 'Josefin Slab', serif;
+}
+
+img {
+  display: block;
+  float: right;
+  margin-top: 25px;
+  margin-right: 5%;
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+section {
+  display: block;
+  float: right;
+  text-align: center;
+  padding: 10px;
+  margin: 35px 8% 10px 0;
+  border-radius: 10px;
+}
+
+button {
+  background-color: #FF5500;
+  color: black;
+  padding: 7px 20px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+table {
+  display: block;
+  float: left;
+  background-color: #FF5500;
+  text-align: center;
+  margin-top: -75px;
+  margin-left: 5%;
+  border: 5px solid black;
+  border-radius: 10px;
+}
 
 td {
-  width: 40pt;
-  height: 40pt;
+  width: 42pt;
+  height: 42pt;
 }
 
 tbody tr:nth-of-type(odd) {
-  background-color: cornflowerblue;
+  background-color:  #b24712;
 }
 
 tbody tr:nth-of-type(odd) td:nth-of-type(odd) {
-  background-color: yellow;
+  background-color: #FF5500;
 }
 
 tbody tr:nth-of-type(even) td:nth-of-type(odd) {
-  background-color: cornflowerblue;
+  background-color:  #b24712;
 }
 
+/* START chessboard borders*/
+ /* top border */
+thead {
+  background-color: #FF5500;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
 
-tbody tr td:first-child {
-  background-color: teal;
+thead th:first-of-type {
+  border-right: 1px solid black;
+}
+
+thead th:last-of-type {
+  border-right: 1px solid black;
+}
+tbody tr:nth-of-type(even) td:first-of-type {
+  background-color:  #FF5500;
+  border-right: 1px solid black;
+}
+
+tbody tr:nth-of-type(odd) td:first-of-type {
+  background-color: #FF5500;
+  border-right: 1px solid black;
+}
+
+tbody tr:nth-of-type(even) td:last-of-type {
+  background-color:  #FF5500;
+  border-left: 1px solid black;
+}
+
+tbody tr:nth-of-type(odd) td:last-of-type {
+  background-color: #FF5500;
+  border-left: 1px solid black;
+}
+
+tr td:first-of-type {
+  background-color: #FF5500;
 }
 
 tfoot {
-  background-color: teal;
+  background-color: #FF5500;
+  border-top: 1px solid black;
 }
+
+tfoot td:first-of-type {
+  border-right: 1px solid black;
+}
+
+tfoot td:last-of-type {
+  border-left: 1px solid black;
+}
+/* END chessboard borders*/
 
 fieldset {
   width: 400pt;
@@ -138,33 +226,79 @@ fieldset {
   background-color: lightgrey;
 } /* buttons */
 
+ /*---icons for white pieces with class names*/
 
-
-/* ---icons for white pieces with class names
-.white-pawn {
-  font-size: 20px;
+.white-pawn::before {
+  color: #FFE1B5;
+  font-size: 39px;
   content: '\2659';
 }
 
-.white-knight {
+.white-knight::before {
+  font-size: 39px;
   content: '\2658';
+  color: #FFE1B5;
 }
 
-.white-bishop {
+.white-bishop::before {
+  font-size: 39px;
   content: '\2657';
+  color: #FFE1B5;
 }
 
-.white-rook {
+.white-rook::before {
+  font-size: 39px;
   content: '\2656';
+  color: #FFE1B5;
 }
 
-.white-queen {
+.white-queen::before {
+  font-size: 39px;
   content: '\2655';
+  color: #FFE1B5;
 }
 
-.white-king {
+.white-king::before {
+  font-size: 39px;
   content: '\2654';
-}*/
+  color: #FFE1B5;
+}
+
+.black-pawn::before {
+  font-size: 39px;
+  color: #171F1C;
+  content: '\265f';
+}
+
+.black-knight::before {
+  font-size: 39px;
+  color: #171F1C;
+  content: '\265e';
+}
+
+.black-bishop::before {
+  font-size: 39px;
+  color: #171F1C;
+  content: '\265d';
+}
+
+.black-rook::before {
+  font-size: 39px;
+  color: #171F1C;
+  content: '\265c';
+}
+
+.black-queen::before {
+  font-size: 39px;
+  color: #171F1C;
+  content: '\265b';
+}
+
+.black-king::before {
+  font-size: 39px;
+  color: #171F1C;
+  content: '\265a';
+}
 
 /* ==========================================================================
    Helper classes
