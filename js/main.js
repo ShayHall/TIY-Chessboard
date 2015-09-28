@@ -22,15 +22,13 @@
    * @var {Array} of...?
    */
   var moves = [  // TODO: Fill me in!
-      [ ["firstrankfrom", "firstfilefrom"], ["secondrankfrom", "secondfilefrom"]],
-      [ ["firstrankto", "firstfileto"], ["secondrankto", "secondfileto"]]
-    // [ [6,3],[0,6],[6,2],[1,4],[6,6],[1,3],[7,5],[0,5],[7,6] ],//from
-    // [ [4,3],[2,5],[4,2],[2,4],[5,6],[3,3],[6,6],[1,4],[5,5] ] //to
+    [ [6,3],[0,6],[6,2],[1,4],[6,6],[1,3],[7,5],[0,5],[7,6] ],//from
+    [ [4,3],[2,5],[4,2],[2,4],[5,6],[3,3],[6,6],[1,4],[5,5] ] //to
 ];
 
   // var current; TODO: do we need this?
-
   var game = (globals.game = {
+  // var current = Where and what ???
 
     /**
      * Provide a _copy_ of the game board in order to update the View from it
@@ -112,11 +110,17 @@
      *
      * @todo Fill me in! ...and remove this comment.
      */
-    applyMove: function (from, to){
-    board[4][3] = board[6][3];
-    board[6][3] = null;
-    return board;
-      // You should write something in here...
+    applyMove: function (from, to){ // You should write something in here...
+    console.log("test from " + moves[0][0]);
+    console.log("test to " + moves[1][0]);
+    board[to] = board[from];
+    board[from] = null;
+// Let these two side effects stand on their own.
+
+    board[moves[1][0]] = board[moves[0][0]];
+    board[moves[0][0]] = null;
+    // console.log("board \n" + board.join('\n' + '|'));
+    // return board;
     } // END applyMove
   }); // END game
   /**
