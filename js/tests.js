@@ -1,3 +1,52 @@
+(function(globals){ // IIFE
+// Not this again...
+
+  it.skip('should totally fail', function(){
+    chai.expect(false).equals(true);
+  })
+  //
+  it('should have a game in the window', function(){
+    chai.expect(window.game).to.be.equal(game);
+  })
+
+  it('should be an object', function(){
+    chai.expect(game).to.be.an('object');
+  })
+
+  it('should have a key of boardl', function(){
+    chai.expect(game.board).to.exist;
+  })
+
+  it('should be a function', function(){
+    chai.expect(game.board).to.be.a('function');
+  })
+
+  it('should be able to move pieces', function(){
+    chai.expect(game.applyMove()).to.equal(null);
+  })
+//   // TODO: one day {file: 'd', rank: 2},
+//     {rank: 6, file: 3},
+//   // TODO: one day {file: 'd', rank: 4}
+//     {rank: 4, file: 3}
+// );
+// expect(game.board[6][3]).to.be.equal(null);
+// expect(game.board[4][3]).to.be.equal('p');
+
+
+
+
+
+// There's that crazy line again...
+})(window || module && module.exports || this);
+
+
+
+
+
+
+
+
+
 
 
 // console.log("game is an " + game);

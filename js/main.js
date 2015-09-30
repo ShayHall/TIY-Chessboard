@@ -18,7 +18,7 @@
    * @see applyMove
    * @var {Array} of...?
    */
-  var moves = [
+  var moves = [ { from:{rank:6, file:3}, to:{rank:4,file:3} }
     // TODO: Fill me in!
   ]; // END moves
 
@@ -106,7 +106,12 @@
      * @todo Fill me in! ...and remove this comment.
      */
     applyMove: function(from, to){
+
+      console.log(moves[0].from);
       // You should write something in here...
+    // moves[0].to = moves[0].from
+
+// {from:{rank:6,file:3}, to:{rank:4,file:3}}
     } // END applyMove
   }; // END game
 
