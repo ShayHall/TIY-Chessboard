@@ -1,3 +1,104 @@
+(function(globals){ // IIFE
+// Not this again...
+console.log(game.tracer());
+
+  it.skip('should totally fail', function(){
+    chai.expect(false).equals(true);
+  })
+  //
+  it('should have a game in the window', function(){
+    chai.expect(window.game).to.be.equal(game);
+  })
+
+  it('should be an object', function(){
+    chai.expect(game).to.be.an('object');
+  })
+
+  it('should have a key of boardl', function(){
+    chai.expect(game.board).to.exist;
+  })
+
+  it('should be a function', function(){
+    chai.expect(game.board).to.be.a('function');
+  })
+
+it.skip('should tell me what piece is at a position', function(){
+  chai.expect(game.pieceAt(6,3)).to.equal('p');
+  chai.expect(game.pieceAt(6,2)).to.equal('p');
+  chai.expect(game.pieceAt(4,3)).to.equal(null);
+  chai.expect(game.pieceAt(0,0)).to.equal('R');
+});
+
+
+  it('should move exactly one piece', function(){
+  //initialize the environment...
+    game.reset();
+    var board = game.board();
+
+  //test the preconditions...
+    chai.expect(board[6][3]).to.equal('p');
+    chai.expect(board[4][3]).to.be.null;
+
+    chai.expect(game.tracer()).to.equal([
+      '|R|N|B|Q|K|B|N|R|',
+      '|P|P|P|P|P|P|P|P|',
+      '| | | | | | | | |',
+      '| | | | | | | | |',
+      '| | | | | | | | |',
+      '| | | | | | | | |',
+      '|p|p|p|p|p|p|p|p|',
+      '|r|n|b|q|k|b|n|r|',
+    ].join('\n') + '\n');
+
+    // Action to change the world...
+    chai.expect(game.applyMove(
+      { rank: 6, file: 3 }, // from
+      { rank: 4, file: 3 }  // to
+    )).to.equal(undefined);
+
+    var board = game.board(); // Re-copy the board?
+
+    // Test the Postconditions...
+    chai.expect(board[6][3]).to.be.null;
+    chai.expect(board[4][3]).to.be.equal('p');
+
+    chai.expect(game.tracer()).to.equal([
+      '|R|N|B|Q|K|B|N|R|',
+      '|P|P|P|P|P|P|P|P|',
+      '| | | | | | | | |',
+      '| | | | | | | | |',
+      '| | | |p| | | | |',
+      '| | | | | | | | |',
+      '|p|p|p| |p|p|p|p|',
+      '|r|n|b|q|k|b|n|r|',
+    ].join('\n') + '\n');
+
+  }); // it should move a piece
+
+
+
+ //it should move exactly one picee
+
+  // it('should be able to move a different piece', function(){
+  //   //initialize the environment...
+  //   game.reset();
+  //   var board = game.board();
+
+    //test the precondition
+    // chai.expect(board
+
+
+// There's that crazy line again...
+})(window || module && module.exports || this);
+
+
+
+
+
+
+
+
+
 
 
 // console.log("game is an " + game);
