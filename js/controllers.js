@@ -7,28 +7,21 @@
    * 3. What `CALLBACK` should be run when the interaction happens?
    * 4. What should my `CALLBACK` do with it's `EVENT`...?
    */
-  // document.querySelector(SELECTOR)
-  //   .addEventListener(TYPE, CALLBACK);
-  // // AKA
-  // jQuery(SELECTOR).on(TYPE, CALLBACK);
-  // // Where CALLBACK is...
-  // function CALLBACK (EVENT){
-  //   // Do something with Models and Views...
-  //   // Maybe do something with EVENT...?
-  // }
 
 
   // Controller for "next move"...
   jQuery(".fa-step-forward").on('click', function(event){
-    console.log("NEXT MOVE!");
-    // TODO: Tell the Model -- `game` -- to advance to the next move...
+    game.next();//Tell the Model -- `game` -- to advance to the next move...
+
+
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
   // Controller for "previous move"...
   jQuery(".fa-step-backward").on('click', function(event){
-    console.log("PREVIOUS MOVE!");
-    // TODO: Tell the Model -- `game` -- to advance to the previous move...
+    game.prev();//  Tell the Model -- `game` -- to advance to the previous move...
+
+
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
