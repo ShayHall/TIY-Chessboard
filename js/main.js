@@ -108,8 +108,8 @@
       board[6][3] = null;
       board[2][5] = board[0][6];
       board[0][6] = null;
-      // board[to.rank][to.file] = board[from.rank][from.file];
-    console.log(game.tracer(game.applyMove));
+      board[to.rank][to.file] = board[from.rank][from.file];
+    console.log(game.tracer());
     } // END applyMove
   }; // END game
   /**

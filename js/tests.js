@@ -1,6 +1,6 @@
 (function(globals){ // IIFE
 // Not this again...
-console.log(game.tracer());
+// console.log(game.tracer());
 
   it.skip('should totally fail', function(){
     chai.expect(false).equals(true);
@@ -22,23 +22,20 @@ console.log(game.tracer());
     chai.expect(game.board).to.be.a('function');
   })
 
-it.skip('should tell me what piece is at a position', function(){
-  chai.expect(game.pieceAt(6,3)).to.equal('p');
-  chai.expect(game.pieceAt(6,2)).to.equal('p');
-  chai.expect(game.pieceAt(4,3)).to.equal(null);
-  chai.expect(game.pieceAt(0,0)).to.equal('R');
-});
+  it.skip('should tell me what piece is at a position', function(){
+    chai.expect(game.pieceAt(6,3)).to.equal('p');
+    chai.expect(game.pieceAt(6,2)).to.equal('p');
+    chai.expect(game.pieceAt(4,3)).to.equal(null);
+    chai.expect(game.pieceAt(0,0)).to.equal('R');
+  });
 
 
-  it('should move exactly one piece', function(){
+  it.skip('should move exactly one piece', function(){
   //initialize the environment...
     game.reset();
     var board = game.board();
 
-  //test the preconditions...
-    chai.expect(board[6][3]).to.equal('p');
-    chai.expect(board[4][3]).to.be.null;
-
+  //test the pre-conditions...
     chai.expect(game.tracer()).to.equal([
       '|R|N|B|Q|K|B|N|R|',
       '|P|P|P|P|P|P|P|P|',
@@ -51,16 +48,13 @@ it.skip('should tell me what piece is at a position', function(){
     ].join('\n') + '\n');
 
     // Action to change the world...
-    chai.expect(game.applyMove(
-      { rank: 6, file: 3 }, // from
-      { rank: 4, file: 3 }  // to
-    )).to.equal(undefined);
+    chai.expect(game.applyMove( {rank: 6, file:3}, {rank: 4, file:3} )).to.equal(undefined);
 
-    var board = game.board(); // Re-copy the board?
+    var board = game.board();
 
-    // Test the Postconditions...
+    // Test the Post-conditions...
     chai.expect(board[6][3]).to.be.null;
-    chai.expect(board[4][3]).to.be.equal('p');
+    chai.expect(board[4][3]).to.equal('p');
 
     chai.expect(game.tracer()).to.equal([
       '|R|N|B|Q|K|B|N|R|',
@@ -75,17 +69,76 @@ it.skip('should tell me what piece is at a position', function(){
 
   }); // it should move a piece
 
+  it('should move another piece', function(){
+  //Initialize environment
+    game.reset();
+    var board = game.board();
+
+  //Test pre-conditions
+    chai.expect(game.tracer()).to.equal([
+      '|R|N|B|Q|K|B|N|R|',
+      '|P|P|P|P|P|P|P|P|',
+      '| | | | | | | | |',
+      '| | | | | | | | |',
+      '| | | | | | | | |',
+      '| | | | | | | | |',
+      '|p|p|p|p|p|p|p|p|',
+      '|r|n|b|q|k|b|n|r|',
+    ].join('\n') + '\n');
+
+  //Action to change environment
+    // board[4][3] = board[6][3];
+    // board[6][3] = null;
+    // board[2][5] = board[0][6];
+    // board[0][6] = null;
+    chai.expect(game.applyMove( {rank: 6, file:3}, {rank: 4, file:3} )).to.equal(undefined);
+    chai.expect(game.applyMove( {rank: 6, file:3}, null )).to.equal(undefined);  
+    chai.expect(game.applyMove( {rank: 2, file:5}, {rank:0, file:6} )).to.equal(undefined);
+
+  //Test post-conditions
+    chai.expect(game.tracer()).to.equal([
+      '|R|N|B|Q|K|B| |R|',
+      '|P|P|P|P|P|P|P|P|',
+      '| | | | | |N| | |',
+      '| | | | | | | | |',
+      '| | | |p| | | | |',
+      '| | | | | | | | |',
+      '|p|p|p| |p|p|p|p|',
+      '|r|n|b|q|k|b|n|r|',
+    ].join('\n') + '\n');
+}); //it should move another piece...
 
 
- //it should move exactly one picee
+    // chai.expect(board[6][3]).to.equal('p');
+    // chai.expect(board[4][3]).to.be.null;
+    //
+    // chai.expect(game.tracer()).to.equal([
+    //   '|R|N|B|Q|K|B|N|R|',
+    //   '|P|P|P|P|P|P|P|P|',
+    //   '| | | | | | | | |',
+    //   '| | | | | | | | |',
+    //   '| | | | | | | | |',
+    //   '| | | | | | | | |',
+    //   '|p|p|p|p|p|p|p|p|',
+    //   '|r|n|b|q|k|b|n|r|',
+    // ].join('\n') + '\n');
 
-  // it('should be able to move a different piece', function(){
-  //   //initialize the environment...
+
+
+  // it('should... ', function(){
+  //Initialize environment
   //   game.reset();
   //   var board = game.board();
 
-    //test the precondition
-    // chai.expect(board
+  //Test pre-conditions
+
+  //Action to change environment
+
+  //Test post-conditions
+
+// }); //it should...
+
+
 
 
 // There's that crazy line again...
@@ -111,12 +164,6 @@ it.skip('should tell me what piece is at a position', function(){
 // console.log("game.tracer is- \n" + game.tracer());
 
 // console.log("moves" + game.current);
-
-
-
-
-
-
 
 
 // Notes for var moves= in main.js
