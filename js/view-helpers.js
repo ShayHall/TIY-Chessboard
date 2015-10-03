@@ -1,9 +1,6 @@
 ;(function(globals){
 // Your code BELOW here...
 
-
-
-
   // Because the game board only corresponds to the `tbody` element...
   var $chessboard = jQuery('.chessboard tbody');
   // I always start variable names with `$` when they reference `jQuery.Collection` values
@@ -20,16 +17,14 @@
         .find('tr').eq(rank) // Get the `tr` inside the `chessboard` for the `rank`
         .find('td').eq(file) // Get the `td` inside the `tr` for the `file`
 
-      console.log($square.get(), rank, file, piece);
+      console.log($square[0].className)
+      // console.log($square.get(), rank, file, piece);
       // Use the log, Luke!
-
 
 //This is where we remove all the board for the computer except for the pieces and thier location.
       // if (piece) $square.text(piece); // Not _exactly_ what we discussed in class...
-      if (piece === null) {
-        console.log("YUPPERS!");
-      } else {
-        console.log(typeof piece);
+      if (piece) {
+        $square.text(piece); //This puts the pieces on the board!!!
       };
         // TODO: Convert `square` to class name(s)
         // TODO: Add class name(s) to `td` instead
