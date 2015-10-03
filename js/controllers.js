@@ -8,12 +8,12 @@
    * 4. What should my `CALLBACK` do with it's `EVENT`...?
    */
 
+var $chessboard =
 
   // Controller for "next move"...
   jQuery(".fa-step-forward").on('click', function(event){
     game.next();//Tell the Model -- `game` -- to advance to the next move...
-
-
+    
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
