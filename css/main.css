@@ -96,181 +96,157 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-.container {
-  width: auto;
-  margin: 0 10%;
-}
-
-.chessboard  {
-  width: 40%;
-  margin-left: 30%;
-  margin-right: 30%;
+body {
+  background-color: #3a3042;
 }
 
 h1 {
   margin-top: 10px;
   margin-left: 10%;
   margin-right: 10%;
-  color: #b24712;
+  margin-bottom: -15px;
+  color: #01baef;
   text-align: center;
   font-size: 4em;
   font-family: 'Josefin Slab', serif;
 }
 
-td {
-  padding-bottom: 10%;
-  width: 10%;
-}
-
 footer {
   display: block;
   margin-top: 5px;
-  margin-left: 30%;
-  margin-right: 30%;
-  width: 40%;
+  width: 100%;
+  align-content: center;
+  position: relative;
 }
-button {
-  background-color: #FF5500;
+
+.fa {
+  background-color: #0cbaba;
+  position: relative;
   color: black;
-  padding: 2% 5%;
-  font-size: 2vw;
-  border-radius: 5px;
-  margin: 2% 2%;
+  padding: 1% 5%;
+  border-radius: 8px;
+  margin: 1% 1%;
   border: 2px solid black;
 }
 
+.fa.fa-backward  {
+  margin-left: 15%;
+}
+
+.fa.fa-forward  {
+  margin-right: 15%;
+}
+
+.container {
+  width: auto;
+  margin: 0 15%;
+}
+
+.chessboard  {
+  width: 60%;
+  margin: 0 20%;
+}
+
+tbody td {
+  width: 10%;
+  height: 60px;
+}
+
+/*START chessboard colors and border */
 table {
-  background-color: #FF5500;
+  background-color: #b93848;
   text-align: center;
   border: 5px solid black;
 }
 
 tbody tr:nth-of-type(odd) {
-  background-color:  #b24712;
+  background-color:  #01baef;
 }
 
-tbody tr:nth-of-type(odd) td:nth-of-type(odd) {
-  background-color: #FF5500;
+tbody td:nth-of-type(odd) {
+  background-color: #b93848;
 }
 
 tbody tr:nth-of-type(even) td:nth-of-type(odd) {
-  background-color:  #b24712;
+  background-color:  #01baef;
 }
+/*END chessboard colors and border */
 
 /* START chessboard borders*/
-
- /* top border */
 thead {
-  background-color: #FF5500;
+  background-color: #0cbaba;
   text-align: center;
   border-bottom: 1px solid black;
 }
 
-thead th:first-of-type {
+tbody th:first-of-type {
+  background-color: #0cbaba;
   border-right: 1px solid black;
 }
 
-thead th:last-of-type {
-  border-right: 1px solid black;
-}
-
-tbody tr:nth-of-type(even) th:first-of-type {
-  background-color:  #FF5500;
-  border-right: 1px solid black;
-}
-
-tbody tr:nth-of-type(odd) th:first-of-type {
-  background-color: #FF5500;
-  border-right: 1px solid black;
-}
-
-tbody tr:nth-of-type(even) th:last-of-type {
-  background-color:  #FF5500;
-  border-left: 1px solid black;
-}
-
-tbody tr:nth-of-type(odd) th:last-of-type {
-  background-color: #FF5500;
+tbody th:last-of-type {
+  background-color: #0cbaba;
   border-left: 1px solid black;
 }
 
 tfoot {
-  background-color: #FF5500;
+  background-color: #0cbaba;
   border-top: 1px solid black;
-}
-
-tfoot th:first-of-type {
-  border-right: 1px solid black;
-}
-
-tfoot th:last-of-type {
-  border-left: 1px solid black;
 }
 /* END chessboard borders*/
 
 
  /*---icons for white pieces with class names*/
-.chessboard td::before {
-  position: absolute;
-  text-align: center;
-  font-size: 2vw;
-  top: 5px;
-  right: 5px;
-  bottom: 5px;
-  left: 5px;
-}
 
-tbody td {
-  position: relative;
-}
 
-.white.pawn::before {
+
+/*.whitepawn::before {
   content: '\2659';
 }
 
-.white.knight::before {
+.whiteknight::before {
   content: '\2658';
 }
 
-.white.bishop::before {
+.whitebishop::before {
   content: '\2657';
 }
 
-.white.rook::before {
+.whiterook::before {
   content: '\2656';
 }
 
-.white.queen::before {
+.whitequeen::before {
   content: '\2655';
 }
 
-.white.king::before {
+.whiteking::before {
   content: '\2654';
 }
 
-.black.pawn::before {
+.blackpawn::before {
   content: '\265f';
 }
 
-.black.knight::before {
+.blackknight::before {
   content: '\265e';
 }
 
-.black.bishop::before {
+.blackbishop::before {
   content: '\265d';
 }
 
-.black.rook::before {
+.blackrook::before {
   content: '\265c';
 }
 
-.black.queen::before {
+.blackqueen::before {
   content: '\265b';
 }
 
-.black.king::before {
+.blackking::before {
   content: '\265a';
-}
+}*/
 
 /* ==========================================================================
    Helper classes

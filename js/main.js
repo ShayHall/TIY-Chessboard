@@ -1,5 +1,4 @@
 (function(globals){
-// Don't worry if that seems a little funky...
 
   /**
    * Internal representation of the game board in its current state.
@@ -28,13 +27,9 @@
                 { from:{rank:0, file:5}, to:{rank:1,file:4}},
                 { from:{rank:7, file:6}, to:{rank:5,file:5}}
   ]; // END moves
-//from   [ [6,3],[0,6],[6,2],[1,4],[6,6],[1,3],[7,5],[0,5],[7,6] ]
-//to     [ [4,3],[2,5],[4,2],[2,4],[5,6],[3,3],[6,6],[1,4],[5,5] ]
+
 var currentMove = 0;
 
-  // var current; TODO: do we need this?
-
-  // You don't need to understand `globals` yet...
   var game = globals.game = { //globals is the parameter to our IIFE, so by calling game on globals, it's allowed out of the death fence.
     /**
      * Provide a _copy_ of the game board in order to update the View from it
@@ -53,7 +48,7 @@ var currentMove = 0;
      */
     reset: function(){
       board = initial();
-
+      currentMove=0;
       return this;
     },
     /**
@@ -65,15 +60,15 @@ var currentMove = 0;
 
     next: function(){
       if (currentMove < moves.length) {
-      game.applyMove(moves[currentMove].from, moves[currentMove].to);
-      currentMove += 1;
-  } else {
-    currentMove = moves.length;
-  };
-    console.log(currentMove);
-    console.log(game.tracer());
+        game.applyMove(moves[currentMove].from, moves[currentMove].to);
+        currentMove += 1;
+      } else {
+        currentMove = moves.length;
+      };
+      console.log(currentMove);
+      console.log(game.tracer());
 
-    return this;
+      return this;
     },
 
     /**
@@ -100,6 +95,9 @@ var currentMove = 0;
      * @todo Make this work!
      */
     end: function(){
+      currentMove = 9;
+      board = final();
+      console.log(this);
 
       return this;
     },
@@ -154,5 +152,17 @@ var currentMove = 0;
     ];
   } // END initial
 
+  function final(){
+    return [
+      [ 'R', 'N', 'B', 'Q', 'K', null, null, 'R' ],
+      [ 'P', 'P', 'P', null, 'B', 'P', 'P', 'P' ],
+      [ null, null, null, null, 'P', 'N', null, null ],
+      [ null, null, null, 'P', null, null, null, null ],
+      [ null, null, 'p', 'p', null, null, null, null ],
+      [ null, null, null, null, null, 'n', 'p', null ],
+      [ 'p', 'p', null, null, 'p', 'p', 'b', 'p' ],
+      [ 'r', 'n', 'b', 'q', 'k', null, null, 'r' ],
+    ];
+  } // END final
 // You are not expected to understand anything below this line...
 })(window || module && module.exports || this);
