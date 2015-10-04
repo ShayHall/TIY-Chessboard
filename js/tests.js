@@ -92,7 +92,7 @@
     // board[2][5] = board[0][6];
     // board[0][6] = null;
     chai.expect(game.applyMove( {rank: 6, file:3}, {rank: 4, file:3} )).to.equal(undefined);
-    chai.expect(game.applyMove( {rank: 6, file:3}, null )).to.equal(undefined);  
+    chai.expect(game.applyMove( {rank: 6, file:3}, null )).to.equal(undefined);
     chai.expect(game.applyMove( {rank: 2, file:5}, {rank:0, file:6} )).to.equal(undefined);
 
   //Test post-conditions

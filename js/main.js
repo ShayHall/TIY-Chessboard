@@ -35,7 +35,7 @@ var currentMove = 0;
   // var current; TODO: do we need this?
 
   // You don't need to understand `globals` yet...
-  var game = globals.game = {
+  var game = globals.game = { //globals is the parameter to our IIFE, so by calling game on globals, it's allowed out of the death fence.
     /**
      * Provide a _copy_ of the game board in order to update the View from it
      *
@@ -71,6 +71,8 @@ var currentMove = 0;
     currentMove = moves.length;
   };
     console.log(currentMove);
+    console.log(game.tracer());
+
     return this;
     },
 
@@ -88,6 +90,7 @@ var currentMove = 0;
         currentMove = 0;
       };
       console.log(currentMove);
+      console.log(game.tracer());
       return this;
     },
     /**
@@ -129,7 +132,7 @@ var currentMove = 0;
     applyMove: function(from, to){
       board[to.rank][to.file] = board[from.rank][from.file];
       board[from.rank][from.file] = null;
-      console.log(game.tracer());
+
     } // END applyMove
   }; // END game
   /**
