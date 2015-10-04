@@ -57,8 +57,35 @@ function helper () {
       } else {
         $square.text(" ");
       };
+    $(function() {
+      $('td:contains("p")').addClass('whitepawn');
+      $('td:contains("P")').addClass('blackpawn');
+      $('td:contains("r")').addClass('whiterook');
+      $('td:contains("R")').addClass('blackrook');
+      $('td:contains("n")').addClass('whiteknight');
+      $('td:contains("N")').addClass('blackknight');
+      $('td:contains("b")').addClass('whitebishop');
+      $('td:contains("B")').addClass('blackbishop');
+      $('td:contains("q")').addClass('whitequeen');
+      $('td:contains("Q")').addClass('blackqueen');
+      $('td:contains("k")').addClass('whiteking');
+      $('td:contains("K")').addClass('blackking');
+      $('td:contains(" ")').removeClass('whitepawn');
+      $('td:contains(" ")').removeClass('whiterook');
+      $('td:contains(" ")').removeClass('whiteknight');
+      $('td:contains(" ")').removeClass('whitebishop');
+      $('td:contains(" ")').removeClass('whitequeen');
+      $('td:contains(" ")').removeClass('blackking');
+      $('td:contains(" ")').removeClass('blackpawn');
+      $('td:contains(" ")').removeClass('blackrook');
+      $('td:contains(" ")').removeClass('blackknight');
+      $('td:contains(" ")').removeClass('blackbishop');
+      $('td:contains(" ")').removeClass('blackqueen');
+      $('td:contains(" ")').removeClass('blackking');
+    });
     }); //jQuery(row).each...
   }); //jQuery(gameboard).each...
 };//helper()...
+
 
 })(window || module && module.exports || this)
