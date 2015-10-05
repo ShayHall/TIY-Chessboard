@@ -97,8 +97,12 @@ var currentMove = 0;
     end: function(){
       currentMove = 9;
       board = final();
-      console.log(this);
 
+      return this;
+    },
+
+    play: function(){
+      currentMove += 1;
       return this;
     },
     /**

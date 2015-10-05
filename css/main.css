@@ -101,21 +101,19 @@ body {
 }
 
 h1 {
-  color: #01baef;
+  color: #d7b29d;
   display: inline;
   font-size: 4vw;
   font-family: 'Josefin Slab', serif;
 }
 
 header {
-  display: inline;
-  margin-top: 15px;
-  width: 80%;
-  margin: 0 10% 0 20%;
+  width: 70%;
+  margin: 25px 10% 0 20%;
 }
 
 .fa {
-  background-color: #0cbaba;
+  background-color: #8da1b9;
   display: inline;
   font-size: 1vw;
   color: black;
@@ -123,6 +121,7 @@ header {
   border-radius: 8px;
   margin: 1%;
   border: 1px solid black;
+  vertical-align: super;
 }
 
 .container {
@@ -146,11 +145,10 @@ tbody td {
 table {
   background-color: #b93848;
   text-align: center;
-  border: 5px solid black;
 }
 
 tbody tr:nth-of-type(odd) {
-  background-color:  #01baef;
+  background-color:  #796465;
 }
 
 tbody td:nth-of-type(odd) {
@@ -158,32 +156,28 @@ tbody td:nth-of-type(odd) {
 }
 
 tbody tr:nth-of-type(even) td:nth-of-type(odd) {
-  background-color:  #01baef;
+  background-color:  #796465;
 }
 /*END chessboard colors and border */
 
 /* START chessboard borders*/
 thead {
-  background-color: #0cbaba;
+  background-color: #d7b29d;
   text-align: center;
-  border-bottom: 1px solid black;
 }
 
 tbody th:first-of-type {
-  background-color: #0cbaba;
-  border-right: 1px solid black;
+  background-color: #d7b29d;
   width:5%;
 }
 
 tbody th:last-of-type {
-  background-color: #0cbaba;
-  border-left: 1px solid black;
+  background-color: #d7b29d;
   width:5%;
 }
 
 tfoot {
-  background-color: #0cbaba;
-  border-top: 1px solid black;
+  background-color: #d7b29d;
 }
 /* END chessboard borders*/
 
@@ -193,7 +187,7 @@ tfoot {
 .whitepawn::before {
   content: '\2659';
   color: black;
-  font-size: 2vw;
+  font-size: 3vw;
   position:absolute;
   top: 5px;
   bottom:5px;
@@ -204,7 +198,7 @@ tfoot {
 .whiteknight::before {
   content: '\2658';
   color: black;
-  font-size: 2vw;
+  font-size: 3vw;
   position:absolute;
   top: 5px;
   bottom:5px;
@@ -215,7 +209,7 @@ tfoot {
 .whitebishop::before {
   content: '\2657';
   color: black;
-  font-size: 2vw;
+  font-size: 3vw;
   position:absolute;
   top: 5px;
   bottom:5px;
@@ -226,7 +220,7 @@ tfoot {
 .whiterook::before {
   content: '\2656';
   color: black;
-  font-size: 2vw;
+  font-size: 3vw;
   position:absolute;
   top: 5px;
   bottom:5px;
@@ -237,7 +231,7 @@ tfoot {
 .whitequeen::before {
   content: '\2655';
   color: black;
-  font-size: 2vw;
+  font-size: 3vw;
   position:absolute;
   top: 5px;
   bottom:5px;
@@ -248,7 +242,7 @@ tfoot {
 .whiteking::before {
   content: '\2654';
   color: black;
-  font-size: 2vw;
+  font-size: 3vw;
   position:absolute;
   top: 5px;
   bottom:5px;
@@ -259,7 +253,7 @@ tfoot {
 .blackpawn::before {
   content: '\265f';
   color: black;
-  font-size: 2vw;
+  font-size: 3vw;
   position:absolute;
   top: 5px;
   bottom:5px;
@@ -270,7 +264,7 @@ tfoot {
 .blackknight::before {
   content: '\265e';
   color: black;
-  font-size: 2vw;
+  font-size: 3vw;
   position:absolute;
   top: 5px;
   bottom:5px;
@@ -281,7 +275,7 @@ tfoot {
 .blackbishop::before {
   content: '\265d';
   color: black;
-  font-size: 2vw;
+  font-size: 3vw;
   position:absolute;
   top: 5px;
   bottom:5px;
@@ -292,7 +286,7 @@ tfoot {
 .blackrook::before {
   content: '\265c';
   color: black;
-  font-size: 2vw;
+  font-size: 3vw;
   position:absolute;
   top: 5px;
   bottom:5px;
@@ -303,7 +297,7 @@ tfoot {
 .blackqueen::before {
   content: '\265b';
   color: black;
-  font-size: 2vw;
+  font-size: 3vw;
   position:absolute;
   top: 5px;
   bottom:5px;
@@ -314,7 +308,7 @@ tfoot {
 .blackking::before {
   content: '\265a';
   color: black;
-  font-size: 2vw;
+  font-size: 3vw;
   position:absolute;
   top: 5px;
   bottom:5px;

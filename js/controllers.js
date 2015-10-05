@@ -23,7 +23,7 @@
 
   // Controller for "fast-forward"...
   jQuery(".fa-fast-forward").on('click', function(event){
-    console.log("FAST FORWARD!");
+    // console.log("FAST FORWARD!");
     game.end(); //Tell the Model -- `game` -- to advance to the last move...
     helper(); //Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
@@ -34,13 +34,25 @@
     helper(); //Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
+
 // Controller for "watch game play automatically"...
   jQuery(".fa-play").on('click', function (event){
-        console.log("Play!");
-         // TODO: Tell the Model -- `game` -- to do something it knows how to do...
+    // console.log("Play!");
+    var playa =  function() {
+      game.next();
+      helper();
+    }
+      var timer = setInterval(playa, 1000);
+    // Tell the Model -- `game` -- to do something it knows how to do...
+    // helper(); // Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
 
-        helper(); // Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
+// Controller for "pause game"...
+    jQuery(".fa-pause").on('click', function (event){
+      // console.log("Pause");
+      clearInterval(timer);
+    });
   });
+
 
 
 function helper () {
