@@ -97,207 +97,223 @@ textarea {
    ========================================================================== */
 
 body {
-background-color: #FFF9B5;
-margin-left: 15px;
-margin-right: 15px;
+  background-color: #3a3042;
 }
 
 h1 {
-  margin-top: 35px;
-  margin-bottom: -15px;
-  margin-left: 50%;
-  color: #b24712;
-  text-align: center;
-  font-size: 4em;
+  color: #d7b29d;
+  display: inline;
+  font-size: 4vw;
   font-family: 'Josefin Slab', serif;
 }
 
-img {
-  display: block;
-  float: right;
-  margin-top: 25px;
-  margin-right: 5%;
-  border: 5px solid black;
-  border-radius: 10px;
+header {
+  width: 70%;
+  margin: 25px 10% 0 20%;
 }
 
-section {
-  display: block;
-  float: right;
-  text-align: center;
-  padding: 10px;
-  margin: 35px 8% 10px 0;
-  border-radius: 10px;
-}
-
-button {
-  background-color: #FF5500;
+.fa {
+  background-color: #8da1b9;
+  display: inline;
+  font-size: 1vw;
   color: black;
-  padding: 7px 20px;
-  font-size: 15px;
-  border-radius: 5px;
-  border: 2px solid black;
+  padding: 1% 2.5%;
+  border-radius: 8px;
+  margin: 1%;
+  border: 1px solid black;
+  vertical-align: super;
 }
 
+.container {
+  width: auto;
+  margin: 0 15%;
+}
+
+.chessboard  {
+  width: 66%;
+  margin: 0 17%;
+}
+
+tbody td {
+  width: 10%;
+  padding-bottom: 10%;
+  font-size: 0;
+  position:relative;
+}
+
+/*START chessboard colors and border */
 table {
-  display: block;
-  float: left;
-  background-color: #FF5500;
+  background-color: #b93848;
   text-align: center;
-  margin-top: -75px;
-  margin-left: 5%;
-  border: 5px solid black;
-  border-radius: 10px;
-}
-
-td {
-  width: 42pt;
-  height: 42pt;
 }
 
 tbody tr:nth-of-type(odd) {
-  background-color:  #b24712;
+  background-color:  #796465;
 }
 
-tbody tr:nth-of-type(odd) td:nth-of-type(odd) {
-  background-color: #FF5500;
+tbody td:nth-of-type(odd) {
+  background-color: #b93848;
 }
 
 tbody tr:nth-of-type(even) td:nth-of-type(odd) {
-  background-color:  #b24712;
+  background-color:  #796465;
 }
+/*END chessboard colors and border */
 
 /* START chessboard borders*/
- /* top border */
 thead {
-  background-color: #FF5500;
+  background-color: #d7b29d;
   text-align: center;
-  border-bottom: 1px solid black;
 }
 
-thead th:first-of-type {
-  border-right: 1px solid black;
+tbody th:first-of-type {
+  background-color: #d7b29d;
+  width:5%;
 }
 
-thead th:last-of-type {
-  border-right: 1px solid black;
-}
-tbody tr:nth-of-type(even) td:first-of-type {
-  background-color:  #FF5500;
-  border-right: 1px solid black;
-}
-
-tbody tr:nth-of-type(odd) td:first-of-type {
-  background-color: #FF5500;
-  border-right: 1px solid black;
-}
-
-tbody tr:nth-of-type(even) td:last-of-type {
-  background-color:  #FF5500;
-  border-left: 1px solid black;
-}
-
-tbody tr:nth-of-type(odd) td:last-of-type {
-  background-color: #FF5500;
-  border-left: 1px solid black;
-}
-
-tr td:first-of-type {
-  background-color: #FF5500;
+tbody th:last-of-type {
+  background-color: #d7b29d;
+  width:5%;
 }
 
 tfoot {
-  background-color: #FF5500;
-  border-top: 1px solid black;
-}
-
-tfoot td:first-of-type {
-  border-right: 1px solid black;
-}
-
-tfoot td:last-of-type {
-  border-left: 1px solid black;
+  background-color: #d7b29d;
 }
 /* END chessboard borders*/
 
-fieldset {
-  width: 400pt;
-  height: 20pt;
-  background-color: lightgrey;
-} /* buttons */
 
  /*---icons for white pieces with class names*/
 
-.white-pawn::before {
-  color: #FFE1B5;
-  font-size: 39px;
+.whitepawn::before {
   content: '\2659';
+  color: black;
+  font-size: 3vw;
+  position:absolute;
+  top: 5px;
+  bottom:5px;
+  left: 5px;
+  right: 5px;
 }
 
-.white-knight::before {
-  font-size: 39px;
+.whiteknight::before {
   content: '\2658';
-  color: #FFE1B5;
+  color: black;
+  font-size: 3vw;
+  position:absolute;
+  top: 5px;
+  bottom:5px;
+  left: 5px;
+  right: 5px;
 }
 
-.white-bishop::before {
-  font-size: 39px;
+.whitebishop::before {
   content: '\2657';
-  color: #FFE1B5;
+  color: black;
+  font-size: 3vw;
+  position:absolute;
+  top: 5px;
+  bottom:5px;
+  left: 5px;
+  right: 5px;
 }
 
-.white-rook::before {
-  font-size: 39px;
+.whiterook::before {
   content: '\2656';
-  color: #FFE1B5;
+  color: black;
+  font-size: 3vw;
+  position:absolute;
+  top: 5px;
+  bottom:5px;
+  left: 5px;
+  right: 5px;
 }
 
-.white-queen::before {
-  font-size: 39px;
+.whitequeen::before {
   content: '\2655';
-  color: #FFE1B5;
+  color: black;
+  font-size: 3vw;
+  position:absolute;
+  top: 5px;
+  bottom:5px;
+  left: 5px;
+  right: 5px;
 }
 
-.white-king::before {
-  font-size: 39px;
+.whiteking::before {
   content: '\2654';
-  color: #FFE1B5;
+  color: black;
+  font-size: 3vw;
+  position:absolute;
+  top: 5px;
+  bottom:5px;
+  left: 5px;
+  right: 5px;
 }
 
-.black-pawn::before {
-  font-size: 39px;
-  color: #171F1C;
+.blackpawn::before {
   content: '\265f';
+  color: black;
+  font-size: 3vw;
+  position:absolute;
+  top: 5px;
+  bottom:5px;
+  left: 5px;
+  right: 5px;
 }
 
-.black-knight::before {
-  font-size: 39px;
-  color: #171F1C;
+.blackknight::before {
   content: '\265e';
+  color: black;
+  font-size: 3vw;
+  position:absolute;
+  top: 5px;
+  bottom:5px;
+  left: 5px;
+  right: 5px;
 }
 
-.black-bishop::before {
-  font-size: 39px;
-  color: #171F1C;
+.blackbishop::before {
   content: '\265d';
+  color: black;
+  font-size: 3vw;
+  position:absolute;
+  top: 5px;
+  bottom:5px;
+  left: 5px;
+  right: 5px;
 }
 
-.black-rook::before {
-  font-size: 39px;
-  color: #171F1C;
+.blackrook::before {
   content: '\265c';
+  color: black;
+  font-size: 3vw;
+  position:absolute;
+  top: 5px;
+  bottom:5px;
+  left: 5px;
+  right: 5px;
 }
 
-.black-queen::before {
-  font-size: 39px;
-  color: #171F1C;
+.blackqueen::before {
   content: '\265b';
+  color: black;
+  font-size: 3vw;
+  position:absolute;
+  top: 5px;
+  bottom:5px;
+  left: 5px;
+  right: 5px;
 }
 
-.black-king::before {
-  font-size: 39px;
-  color: #171F1C;
+.blackking::before {
   content: '\265a';
+  color: black;
+  font-size: 3vw;
+  position:absolute;
+  top: 5px;
+  bottom:5px;
+  left: 5px;
+  right: 5px;
 }
 
 /* ==========================================================================

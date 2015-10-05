@@ -1,5 +1,4 @@
 (function(globals){
-// Don't worry if that seems a little funky...
 
   /**
    * Internal representation of the game board in its current state.
@@ -18,14 +17,20 @@
    * @see applyMove
    * @var {Array} of...?
    */
-  var moves = [ { from:{rank:6, file:3}, to:{rank:4,file:3} }
-    // TODO: Fill me in!
+  var moves = [ { from:{rank:6, file:3}, to:{rank:4,file:3}},
+                { from:{rank:0, file:6}, to:{rank:2,file:5}},
+                { from:{rank:6, file:2}, to:{rank:4,file:2}},
+                { from:{rank:1, file:4}, to:{rank:2,file:4}},
+                { from:{rank:6, file:6}, to:{rank:5,file:6}},
+                { from:{rank:1, file:3}, to:{rank:3,file:3}},
+                { from:{rank:7, file:5}, to:{rank:6,file:6}},
+                { from:{rank:0, file:5}, to:{rank:1,file:4}},
+                { from:{rank:7, file:6}, to:{rank:5,file:5}}
   ]; // END moves
 
-  // var current; TODO: do we need this?
+var currentMove = 0;
 
-  // You don't need to understand `globals` yet...
-  var game = globals.game = {
+  var game = globals.game = { //globals is the parameter to our IIFE, so by calling game on globals, it's allowed out of the death fence.
     /**
      * Provide a _copy_ of the game board in order to update the View from it
      *
@@ -43,7 +48,7 @@
      */
     reset: function(){
       board = initial();
-
+      currentMove=0;
       return this;
     },
     /**
@@ -52,8 +57,17 @@
      * @return {Object} the game object for Method Chaining
      * @todo Make this work!
      */
+
     next: function(){
-      // Doesn't this seem to be missing something?
+      if (currentMove < moves.length) {
+        game.applyMove(moves[currentMove].from, moves[currentMove].to);
+        currentMove += 1;
+      } else {
+        currentMove = moves.length;
+      };
+      console.log(currentMove);
+      console.log(game.tracer());
+
       return this;
     },
 
@@ -64,7 +78,14 @@
      * @todo Make this work!
      */
     prev: function(){
-      // Another good place for code...
+      if (currentMove > 0) {
+        currentMove -= 1;
+        game.applyMove(moves[currentMove].to, moves[currentMove].from);
+      } else {
+        currentMove = 0;
+      };
+      console.log(currentMove);
+      console.log(game.tracer());
       return this;
     },
     /**
@@ -74,7 +95,14 @@
      * @todo Make this work!
      */
     end: function(){
-      // Write some code here...
+      currentMove = 9;
+      board = final();
+
+      return this;
+    },
+
+    play: function(){
+      currentMove += 1;
       return this;
     },
     /**
@@ -104,12 +132,9 @@
      *
      */
     applyMove: function(from, to){
-      board[4][3] = board[6][3];
-      board[6][3] = null;
-      board[2][5] = board[0][6];
-      board[0][6] = null;
-      // board[to.rank][to.file] = board[from.rank][from.file];
-    console.log(game.tracer(game.applyMove));
+      board[to.rank][to.file] = board[from.rank][from.file];
+      board[from.rank][from.file] = null;
+
     } // END applyMove
   }; // END game
   /**
@@ -131,26 +156,17 @@
     ];
   } // END initial
 
+  function final(){
+    return [
+      [ 'R', 'N', 'B', 'Q', 'K', null, null, 'R' ],
+      [ 'P', 'P', 'P', null, 'B', 'P', 'P', 'P' ],
+      [ null, null, null, null, 'P', 'N', null, null ],
+      [ null, null, null, 'P', null, null, null, null ],
+      [ null, null, 'p', 'p', null, null, null, null ],
+      [ null, null, null, null, null, 'n', 'p', null ],
+      [ 'p', 'p', null, null, 'p', 'p', 'b', 'p' ],
+      [ 'r', 'n', 'b', 'q', 'k', null, null, 'r' ],
+    ];
+  } // END final
 // You are not expected to understand anything below this line...
 })(window || module && module.exports || this);
-
-
-
-
-
-
-
-// OLD CODE BELOW
-
-
-//   var moves = [  // TODO: Fill me in!
-//     [ [6,3],[0,6],[6,2],[1,4],[6,6],[1,3],[7,5],[0,5],[7,6] ],//from
-//     [ [4,3],[2,5],[4,2],[2,4],[5,6],[3,3],[6,6],[1,4],[5,5] ] //to
-// ];
-//
-//
-//     board[moves[1][0]] = board[moves[0][0]];
-//     board[moves[0][0]] = null;
-//     // console.log("board \n" + board.join('\n' + '|'));
-//     // return board;
-//     } // END applyMove
